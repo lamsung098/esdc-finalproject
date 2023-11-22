@@ -1,0 +1,13 @@
+By Eclipse:
+	Install Spring Tool Suite
+	Import Spring Project
+	Run lombok.jar to add Lombok library
+	Open application.properties from /src/main/resources
+		Config your MySQL:
+			- url
+			- username
+			- password
+	Run:
+		Right click project choose "Run as -> Spring Boot App"
+		Go to localhost:8080
+			
