@@ -17,4 +17,8 @@ public class AccountService{
 	public List<Account> findAll() {
 		return repository.findAll();
 	}
+	
+	public Account getByUsername(String username) {
+		return repository.findByUserName(username);
+	}
 }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+</head>
+<body>
+	<form th:action="@{/register}" th:objects="${user}"
+		method="post" onsubmit="handleRegister()">
+		<div class="form-group">
+			<label for="username">Username:</label> <input type="text"
+				class="form-control" placeholder="Nhập tài khoản" name="username"
+				>
+		</div>
+		<div class="form-group">
+			<label for="fullName">Firstname:</label> <input type="text"
+				class="form-control" placeholder="First name"
+				name="firstName">
+		</div>
+				<div class="form-group">
+			<label for="fullName">Lastname:</label> <input type="text"
+				class="form-control" placeholder="Last name"
+				name="lastName">
+		</div>
+		<div class="form-group">
+			<label for="date">Birthday:</label> <input type="date"
+				class="form-control" name="birthday">
+		</div>
+		<div class="form-group">
+			<label for="email">Email:</label> <input type="email"
+				class="form-control" placeholder="Nhập email" name="email"
+				>
+		</div>
+		</div>
+		<div class="form-group">
+			<label for="phone">Số điện thoại:</label> <input type="text"
+				class="form-control" placeholder="Nhập số điện thoại" name="phoneNumber">
+		</div>
+		<div class="form-group">
+			<label for="pwd">Mật khẩu:</label> <input type="password"
+				class="form-control" placeholder="Nhập mật khẩu" name="password">
+		</div>
+		<div class="form-group">
+			<label for="conf_pwd">Xác nhận mật khẩu:</label> <input
+				type="password" class="form-control" placeholder="Xác nhận mật khẩu"
+				name="confirmpassword">
+		</div>
+		<div class="form-group form-check">
+			<label class="form-check-label"> <input
+				class="form-check-input" type="checkbox"> Tôi đã đọc và đồng
+				ý với các điều kiện và chính sách bảo mật của khách sạn.
+			</label>
+		</div>
+		<button type="submit" class="btn submit-btn">Đăng ký</button>
+		<p class="more_option">
+			Đã có tài khoản? <a th:href="@{/login}">Đăng nhập</a>
+		</p>
+	</form>
+</body>
+</html>
